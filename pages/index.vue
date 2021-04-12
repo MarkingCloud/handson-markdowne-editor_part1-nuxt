@@ -20,6 +20,7 @@
           <v-card-subtitle>{{ memo.data.timestamp }}</v-card-subtitle>
         </v-card>
       </v-col>
+      <v-btn color="primary" @click="save"> SAVE </v-btn>
     </v-row>
   </v-col>
 </template>
@@ -40,6 +41,10 @@ export default {
   //   this.$store.dispatch('memos/readDb')
   // },
   methods: {
+    save() {
+      console.log('test')
+      this.$store.commit('memos/add', { id: this.newid, data: 'data' })
+    },
     add() {
       window.location.href = '/' + this.newid
     },

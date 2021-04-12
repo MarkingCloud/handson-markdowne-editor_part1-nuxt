@@ -8,8 +8,8 @@
     </v-col>
     <v-col cols="12">
       <!-- <v&#45;btn color="primary" :loading="loading" @click="saveDb"> SAVE </v&#45;btn> -->
-      <v-btn color="primary" :loading="loading"> SAVE </v-btn>
-      <v-btn color="error" @click="cancel"> BACK </v-btn>
+      <v-btn color="primary" :loading="loading" @click="save"> SAVE </v-btn>
+      <v-btn color="error" @click="back"> BACK </v-btn>
     </v-col>
   </v-row>
 </template>
@@ -50,7 +50,10 @@ export default {
     //       alert(e)
     //     }
     //   },
-    cancel() {
+    save() {
+      console.log('test')
+    },
+    back() {
       window.location.href = '/'
     },
     //   async saveDb() {

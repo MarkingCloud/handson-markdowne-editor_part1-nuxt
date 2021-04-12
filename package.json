@@ -13,7 +13,8 @@
   "dependencies": {
     "@toast-ui/vue-editor": "^2.5.1",
     "core-js": "^3.9.1",
-    "nuxt": "^2.15.3"
+    "nuxt": "^2.15.3",
+    "vuex-persistedstate": "^4.0.0-beta.3"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "^6.0.0",
