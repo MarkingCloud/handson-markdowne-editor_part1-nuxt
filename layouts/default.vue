@@ -10,7 +10,7 @@
         <nuxt />
       </v-container>
     </v-main>
-    <v-footer dark color="orange" :absolute="!fixed" app>
+    <v-footer dark color="orange" app>
       <span>© 2021 MarkingCloud</span>
     </v-footer>
   </v-app>

@@ -23,7 +23,11 @@ export default {
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: [],
+  css: [
+    'codemirror/lib/codemirror.css',
+    '@toast-ui/editor/dist/toastui-editor.css',
+    '@toast-ui/editor/dist/toastui-editor-viewer.css',
+  ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [],
