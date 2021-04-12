@@ -9,6 +9,7 @@ export default {
   // 変数
   data() {
     return {
+      // IDに利用するランダムな文字列を生成
       newid: Math.random().toString(32).substring(2),
     }
   },
