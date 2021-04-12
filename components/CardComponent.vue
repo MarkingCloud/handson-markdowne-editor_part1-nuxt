@@ -21,6 +21,7 @@ export default {
   // 計算した値をとる変数
   computed: {
     memos() {
+      // store/memos.js/listを取得
       return this.$store.state.memos.list
     },
   },
@@ -31,6 +32,7 @@ export default {
     },
     remove(id) {
       if (confirm('削除しますか？')) {
+        // store/memos.js/removeを実行
         this.$store.commit('memos/remove', id)
       }
     },

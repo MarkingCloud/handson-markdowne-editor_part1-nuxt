@@ -16,6 +16,7 @@ export default {
   // 計算した値をとる変数
   computed: {
     memos() {
+      // store/memos.js/listを取得
       return this.$store.state.memos.list
     },
   },
