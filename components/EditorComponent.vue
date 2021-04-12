@@ -28,7 +28,7 @@ export default {
       loading: false,
     }
   },
-  // 計算した値をとる変数
+  // 処理結果を変数へ格納
   computed: {
     initial() {
       const list = this.$store.state.memos.list

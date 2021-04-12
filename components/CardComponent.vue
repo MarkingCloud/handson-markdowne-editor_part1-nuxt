@@ -18,7 +18,7 @@
 export default {
   // 親から渡された値
   props: { memo: { type: Object, required: true } },
-  // 計算した値をとる変数
+  // 処理結果を変数へ格納
   computed: {
     memos() {
       // store/memos.js/listを取得

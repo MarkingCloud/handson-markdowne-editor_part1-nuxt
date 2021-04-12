@@ -5,20 +5,20 @@
       <NewCardComponent />
     </v-col>
     <!-- カードリスト -->
-    <v-col v-for="memo in memos" :key="memo.id" cols="3">
-      <CardComponent :memo="memo" />
-    </v-col>
+    <!-- <v-col v-for="memo in memos" :key="memo.id" cols="3"> -->
+    <!--   <CardComponent :memo="memo" /> -->
+    <!-- </v-col> -->
   </v-row>
 </template>
 
 <script>
 export default {
-  // 計算した値をとる変数
-  computed: {
-    memos() {
-      // store/memos.js/listを取得
-      return this.$store.state.memos.list
-    },
-  },
+  // 処理結果を変数へ格納
+  // computed: {
+  //   memos() {
+  //     // store/memos.js/listを取得
+  //     return this.$store.state.memos.list
+  //   },
+  // },
 }
 </script>

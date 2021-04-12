@@ -1,0 +1,19 @@
+<template>
+  <v-row>
+    <v-col cols="12">
+      <span> このページのIDは「{{ id }}」です。</span>
+      <!-- <EditorComponent /> -->
+    </v-col>
+  </v-row>
+</template>
+
+<script>
+export default {
+  // 変数
+  data() {
+    return {
+      id: this.$route.params.id,
+    }
+  },
+}
+</script>
