@@ -3,10 +3,11 @@ export const state = () => ({
     {
       id: 'id1',
       data: {
-        title: 'アプリ作成ハンズオン〜Nuxt編〜',
+        title: '# ハンズオン~Nuxt編~',
         timestamp: '2021-04-20 19:30',
-        text: `
-# **コンテンツ**
+        text: `# ハンズオ~Nuxt編~
+
+## **コンテンツ**
 
 ### **ハンズオン形式でアプリ作成の流れを学ぼう！**
 
@@ -36,7 +37,7 @@ CI/CDツールの **GitHub Actions** を使って、マークダウンエディ�
       data: {
         title: 'title',
         timestamp: '2021-04-21 19:30',
-        text: 'test text 1',
+        text: 'test text 1\n',
       },
     },
     {
@@ -44,34 +45,47 @@ CI/CDツールの **GitHub Actions** を使って、マークダウンエディ�
       data: {
         title: 'title',
         timestamp: '2021-04-22 19:30',
-        text: 'test text 2',
+        text: 'test text 2\n',
       },
     },
   ],
 })
 
 export const mutations = {
+  save(state, { id, data }) {
+    const target = state.list.find((item) => item.id === id)
+    if (target) {
+      target.data = data
+    } else {
+      state.list.push({ id, data })
+    }
+  },
   add(state, { id, data }) {
     state.list.push({ id, data })
   },
-  remove(state, index) {
+  remove(state, id) {
+    const index = state.list.findIndex((item) => item.id === id)
     state.list.splice(index, 1)
   },
-  save(state, { index, item }) {
-    state.list.splice(index, 1, item)
-  },
+  // save(state, { index, item }) {
+  //   state.list.splice(index, 1, item)
+  // },
 }
 
-// export const actions = {
-//   async readDb(context) {
-//     const db = this.$fire.firestore.collection('memos')
-//     try {
-//       const snapshot = await db.get()
-//       snapshot.forEach((doc) => {
-//         context.commit('add', { id: doc.id, data: doc.data() })
-//       })
-//     } catch (e) {
-//       alert(e)
-//     }
-//   },
-// }
+export const actions = {
+  async saveLocalMemo(context, { newid, newdata }) {
+    context.commit('save', { id: newid, data: newdata })
+    await new Promise((resolve) => setTimeout(resolve, 1000))
+  },
+  // async readDb(context) {
+  //   const db = this.$fire.firestore.collection('memos')
+  //   try {
+  //     const snapshot = await db.get()
+  //     snapshot.forEach((doc) => {
+  //       context.commit('add', { id: doc.id, data: doc.data() })
+  //     })
+  //   } catch (e) {
+  //     alert(e)
+  //   }
+  // },
+}
