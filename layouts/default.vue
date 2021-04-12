@@ -1,8 +1,8 @@
 <template>
   <v-app>
     <v-app-bar dark color="orange" :clipped-left="clipped" fixed app>
-      <v-icon class="mx-2">mdi-cloud-outline</v-icon>
-      <v-toolbar-title v-text="title" />
+      <v-icon class="mx-2" @click="back">mdi-cloud-outline</v-icon>
+      <v-toolbar-title @click="back" v-text="title" />
       <v-spacer />
     </v-app-bar>
     <v-main>
@@ -23,6 +23,11 @@ export default {
       clipped: false,
       title: 'Markdown Editor',
     }
+  },
+  methods: {
+    back() {
+      window.location.href = '/'
+    },
   },
 }
 </script>
