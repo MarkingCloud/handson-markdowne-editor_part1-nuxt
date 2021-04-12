@@ -13,6 +13,7 @@
 
 <script>
 export default {
+  // 計算した値をとる変数
   computed: {
     memos() {
       return this.$store.state.memos.list
