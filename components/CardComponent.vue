@@ -13,20 +13,13 @@
 
 <script>
 export default {
-  // props: { memo: Object },
   props: { memo: { type: Object, required: true } },
   computed: {
     memos() {
       return this.$store.state.memos.list
     },
   },
-  created() {
-    // this.$store.dispatch('memos/readDb')
-  },
   methods: {
-    // add() {
-    //   window.location.href = '/' + this.newid
-    // },
     edit(id) {
       window.location.href = '/' + id
     },

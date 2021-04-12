@@ -67,9 +67,6 @@ export const mutations = {
     const index = state.list.findIndex((item) => item.id === id)
     state.list.splice(index, 1)
   },
-  // save(state, { index, item }) {
-  //   state.list.splice(index, 1, item)
-  // },
 }
 
 export const actions = {
@@ -77,15 +74,4 @@ export const actions = {
     context.commit('save', { id: newid, data: newdata })
     await new Promise((resolve) => setTimeout(resolve, 1000))
   },
-  // async readDb(context) {
-  //   const db = this.$fire.firestore.collection('memos')
-  //   try {
-  //     const snapshot = await db.get()
-  //     snapshot.forEach((doc) => {
-  //       context.commit('add', { id: doc.id, data: doc.data() })
-  //     })
-  //   } catch (e) {
-  //     alert(e)
-  //   }
-  // },
 }

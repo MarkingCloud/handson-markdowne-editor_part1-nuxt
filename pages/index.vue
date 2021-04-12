@@ -18,8 +18,5 @@ export default {
       return this.$store.state.memos.list
     },
   },
-  created() {
-    // this.$store.dispatch('memos/readDb')
-  },
 }
 </script>
