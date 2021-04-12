@@ -1,12 +1,12 @@
 <template>
   <v-row>
     <v-col class="text-center">
-      <img src="/v.png" alt="Vuetify.js" class="mb-5" />
+      <img src="/markingcloud-icon.png" />
       <blockquote class="blockquote">
-        &#8220;First, solve the problem. Then, write the code.&#8221;
+        &#8220;NO CLOUD, NO LIFE&#8221;
         <footer>
           <small>
-            <em>&mdash;John Johnson</em>
+            <em>&mdash;by MarkingCloud</em>
           </small>
         </footer>
       </blockquote>
