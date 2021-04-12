@@ -39,9 +39,3 @@ export default {
   },
 }
 </script>
-
-<style>
-* {
-  font-family: auto;
-}
-</style>

@@ -6,7 +6,7 @@ export const state = () => ({
       data: {
         title: '# ハンズオン~Nuxt編~',
         timestamp: '2021-04-20 19:30',
-        text: `# ハンズオ~Nuxt編~
+        text: `# ハンズオン~Nuxt編~
 
 ## **コンテンツ**
 
