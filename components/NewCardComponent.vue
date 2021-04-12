@@ -6,11 +6,13 @@
 
 <script>
 export default {
+  // 変数
   data() {
     return {
       newid: Math.random().toString(32).substring(2),
     }
   },
+  // 関数定義
   methods: {
     add() {
       window.location.href = '/' + this.newid

@@ -1,3 +1,4 @@
+// データ格納
 export const state = () => ({
   list: [
     {
@@ -51,7 +52,9 @@ CI/CDツールの **GitHub Actions** を使って、マークダウンエディ�
   ],
 })
 
+// データを操作する(同期的処理)
 export const mutations = {
+  // ID検索と編集/要素追加
   save(state, { id, data }) {
     const target = state.list.find((item) => item.id === id)
     if (target) {
@@ -60,16 +63,20 @@ export const mutations = {
       state.list.push({ id, data })
     }
   },
+  // 要素追加
   add(state, { id, data }) {
     state.list.push({ id, data })
   },
+  // 要素削除
   remove(state, id) {
     const index = state.list.findIndex((item) => item.id === id)
     state.list.splice(index, 1)
   },
 }
 
+// 非同期処理を実行する
 export const actions = {
+  // list更新＆DB通信を模して1秒待機
   async saveLocalMemo(context, { newid, newdata }) {
     context.commit('save', { id: newid, data: newdata })
     await new Promise((resolve) => setTimeout(resolve, 1000))
