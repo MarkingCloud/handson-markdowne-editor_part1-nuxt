@@ -71,6 +71,6 @@ export default {
     dir: 'public', // デフォルトは`dist`
   },
   router: {
-    base: '/handson-markdowne-editor_part1-nuxt/public',
+    base: 'https://markingcloud.github.io/handson-markdowne-editor_part1-nuxt/public/',
   },
 }
