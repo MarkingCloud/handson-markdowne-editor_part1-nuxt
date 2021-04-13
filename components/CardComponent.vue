@@ -3,14 +3,17 @@
     <!-- タイトル -->
     <v-card-title class="headline">
       {{ memo.data.title }}
-      <v-spacer></v-spacer>
-      <!-- 削除ボタン -->
+    </v-card-title>
+    <!-- 削除ボタン -->
+    <div class="ma-2" style="position: absolute; bottom: 0; right: 0">
       <v-btn icon color="red" @click="remove(memo.id)">
         <v-icon>mdi-trash-can-outline</v-icon>
       </v-btn>
-    </v-card-title>
+    </div>
     <!-- サブタイトル(時刻を表示) -->
-    <v-card-subtitle>{{ memo.data.timestamp }}</v-card-subtitle>
+    <div style="position: absolute; bottom: 0">
+      <v-card-subtitle>{{ memo.data.timestamp }}</v-card-subtitle>
+    </div>
   </v-card>
 </template>
 
