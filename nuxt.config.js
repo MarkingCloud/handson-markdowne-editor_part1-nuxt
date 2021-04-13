@@ -30,9 +30,7 @@ export default {
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [
-    { src: '~/plugins/localStorage.js', ssr: false }
-  ],
+  plugins: [{ src: '~/plugins/localStorage.js', ssr: false }],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
@@ -71,5 +69,8 @@ export default {
   build: {},
   generate: {
     dir: 'public', // デフォルトは`dist`
+  },
+  router: {
+    base: '/MarkingCloud/handson-markdowne-editor_part1-nuxt/',
   },
 }
