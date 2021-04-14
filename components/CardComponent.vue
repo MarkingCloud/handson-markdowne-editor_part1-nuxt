@@ -31,7 +31,9 @@ export default {
   // 関数定義
   methods: {
     edit(id) {
-      window.location.href = '/' + id
+      // window.location.href = '/' + id
+      const path = '/' + id
+      this.$router.push(path)
     },
     remove(id) {
       if (confirm('削除しますか？')) {
