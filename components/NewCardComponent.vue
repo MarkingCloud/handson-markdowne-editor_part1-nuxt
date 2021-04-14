@@ -16,7 +16,8 @@ export default {
   // 関数定義
   methods: {
     add() {
-      window.location.href = '/' + this.newid
+      const path = '/' + this.newid
+      this.$router.push(path)
     },
   },
 }
