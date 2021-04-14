@@ -26,7 +26,7 @@ export default {
   },
   methods: {
     back() {
-      window.location.href = '/'
+      this.$router.push('/')
     },
   },
 }

@@ -69,7 +69,7 @@ export default {
       this.loading = false
     },
     back() {
-      window.location.href = '/'
+      this.$router.push('/')
     },
   },
 }
