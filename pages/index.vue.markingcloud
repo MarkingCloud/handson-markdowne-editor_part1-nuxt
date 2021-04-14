@@ -5,9 +5,9 @@
       <NewCardComponent />
     </v-col>
     <!-- カードリスト -->
-    <!-- <v-col v-for="memo in memos" :key="memo.id" cols="3"> -->
-    <!--   <CardComponent :memo="memo" /> -->
-    <!-- </v-col> -->
+    <v-col v-for="memo in memos" :key="memo.id" cols="3">
+      <CardComponent :memo="memo" />
+    </v-col>
   </v-row>
 </template>
 
