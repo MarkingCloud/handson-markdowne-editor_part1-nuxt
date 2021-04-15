@@ -69,4 +69,10 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
+    generate: {
+        dir: 'public', // デフォルトは`dist`
+      },
+    router: {
+        base: '/handson-markdowne-editor_part1-nuxt/public/',
+      },
 }
