@@ -1,0 +1,23 @@
+{
+  "environment": "web",
+  "format": "html",
+  "prefix": "https://storage.googleapis.com",
+  "mainga": "UA-49880327-14",
+  "updated": "2021-04-15T10:04:47Z",
+  "id": "handson-markdowne-editor_part1-nuxt",
+  "duration": 0,
+  "title": "アプリ作成ハンズオン〜Nuxt編〜",
+  "authors": "kou72",
+  "summary": "アプリ作成ハンズオン〜Nuxt編〜",
+  "source": "1699Aa0MWDgaIKmWycbLBpAdIDuh_ZcBi_7qvoGZQ40U",
+  "theme": "nuxt",
+  "status": [
+    "draft"
+  ],
+  "category": [
+    "Nuxt"
+  ],
+  "tags": [],
+  "feedback": "https://github.com/MarkingCloud/handson-markdowne-editor_part1-nuxt.git",
+  "url": "handson-markdowne-editor_part1-nuxt"
+}

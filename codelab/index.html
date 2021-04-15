@@ -1,0 +1,491 @@
+
+<!doctype html>
+
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+  <meta name="theme-color" content="#4F7DC9">
+  <meta charset="UTF-8">
+  <title>アプリ作成ハンズオン〜Nuxt編〜</title>
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Code+Pro:400|Roboto:400,300,400italic,500,700|Roboto+Mono">
+  <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://storage.googleapis.com/codelab-elements/codelab-elements.css">
+  <style>
+    .success {
+      color: #1e8e3e;
+    }
+    .error {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <google-codelab-analytics gaid="UA-49880327-14"></google-codelab-analytics>
+  <google-codelab codelab-gaid=""
+                  id="handson-markdowne-editor_part1-nuxt"
+                  title="アプリ作成ハンズオン〜Nuxt編〜"
+                  environment="web"
+                  feedback-link="https://github.com/MarkingCloud/handson-markdowne-editor_part1-nuxt.git">
+    
+      <google-codelab-step label="はじめに" duration="0">
+        <h2 is-upgraded><strong>概要</strong></h2>
+<p>実際にマークダウンエディタを作りながら、Nuxt、Firebase、GitHubActionsの使い方を学びましょう！</p>
+<p class="image-container"><img style="width: 601.70px" src="img/9001598438a1eb01.png"></p>
+<p><a href="https://markingcloud.github.io/handson-markdowne-editor_part1-nuxt/public/" target="_blank"><paper-button class="colored" raised>サンプルアプリ</paper-button></a></p>
+<h2 class="checklist" is-upgraded><strong>What you&#39;ll learn</strong></h2>
+<ul class="checklist">
+<li>Vue.js, Nuxt.jsとは何か(ちょっと)分かる</li>
+<li>Nuxt.jsのディレクトリの役割が(ちょっと)分かる</li>
+<li>Pages, Components, Storeの使い方が(ちょっと)分かる</li>
+</ul>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="ハンズオンのポイント" duration="0">
+        <h2 is-upgraded><strong>Vue.jsとNuxt.jsとは何か(ちょっと)分かる</strong></h2>
+<p>vue.js/Nuxt.jsのポジションやコードの読み方を解説します。</p>
+<p>ちょっとだけ語れるようになります。</p>
+<p class="image-container"><img style="width: 601.70px" src="img/d211c52b64077d5f.png"></p>
+<h2 is-upgraded><strong>Nuxt.jsのディレクトリの役割が(ちょっと)分かる</strong></h2>
+<p>初見でまず混乱するNuxtのディレクトリ構成を今回利用するものをメインに解説します。</p>
+<p>各ディレクトリ構成の役割がなんとなく分かります。</p>
+<p class="image-container"><img style="width: 601.70px" src="img/ccfac12ed1304287.png"></p>
+<p><a href="https://ja.nuxtjs.org/docs/2.x/concepts/views" target="_blank">Nuxt.js でのビューの構成</a></p>
+<h2 is-upgraded><strong>Pages, Components, Storeの使い方が(ちょっと)分かる</strong></h2>
+<p>今回のハンズオンの中では主にPages. Components, Storeの機能を利用します。</p>
+<p>これらの使い方がふんわりと理解できます。</p>
+<p class="image-container"><img style="width: 601.70px" src="img/157fdae1f29d2d00.png"></p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Vue.js / Nuxt.js とは" duration="0">
+        <h2 is-upgraded><strong>Vue.jsとは</strong></h2>
+<p>Vue.jsとはJavaScriptのフレームワークの1つです。</p>
+<p><strong>小さくシンプル</strong>に始めることができる、というコンセプトで開発されています。</p>
+<p class="image-container"><img style="width: 601.70px" src="img/1a68d46461268540.png"></p>
+<h3 is-upgraded><strong>特徴1：小さくはじめてモジュールを追加して増強していく</strong></h3>
+<p>Vue.jsの持つ機能は少なく、UIを作る程度のことしかできない。</p>
+<p>その代わり周辺モジュールが充実しており、これらを追加することで複雑な処理に対応可能。</p>
+<p class="image-container"><img style="width: 601.70px" src="img/a8d3d515cd43e7a3.png"></p>
+<h3 is-upgraded><strong>特徴2：コンポーネント指向</strong></h3>
+<p>コンポーネント指向 ＝ デザインパーツの組み合わせでUIを構成すること</p>
+<p><strong>同じファイルに HTML, CSS, JS を書き込んでしまい</strong>、コンポートント化して利用する。</p>
+<p class="image-container"><img style="width: 601.70px" src="img/477ec792e0cd482a.png"></p>
+<h3 is-upgraded><strong>特徴3：学習コストが低い</strong></h3>
+<p>と言われている。</p>
+<p>ただ<strong>Javascriptがそもそも難しい</strong>。</p>
+<h2 is-upgraded><strong>Nuxt.jsとは</strong></h2>
+<p>Vue周辺のエコシステムをまとめてパッケージにして、さらにいい感じに処理が自動化されたもの。</p>
+<p class="image-container"><img style="width: 601.70px" src="img/6f1e437f9f966104.png"></p>
+<p>周辺のモジュールを自分で整えていくのに比べると<strong>圧倒的に楽！</strong></p>
+<p>かなり<strong>パワフルに自動化</strong>されてる。「えっ」ってなるぐらい自動化されている。</p>
+<p>その分<strong>暗黙の了解</strong>的な記法が多く、知らないと「本当に何もわからん」となる。</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="事前準備" duration="0">
+        <h2 is-upgraded><strong>1.Cloud Shellで開く</strong></h2>
+<p>Cloud Shellを開いてコードをクローンしましょう。</p>
+<p class="image-container"><img style="width: 389.00px" src="img/5399c5572b55879c.png"></p>
+<aside class="special"><h2 is-upgraded><strong>Cloud Shellとは</strong></h2>
+<ul>
+<li>GCPのサービスの一つ</li>
+<li>ブラウザでアクセス可能な、クラウドベースの統合開発環境(IDE)</li>
+<li>Githubと連携することで簡単に開発環境を構築可能！</li>
+</ul>
+</aside>
+<p><a href="https://ssh.cloud.google.com/cloudshell/editor?cloudshell_git_repo=https://github.com/MarkingCloud/handson-markdowne-editor_part1-nuxt.git" target="_blank"><paper-button class="colored" raised>Cloud Shellでリポジトリを開く</paper-button></a></p>
+<p>上のリンクをクリックするとCloud Shellが開き、リポジトリをクローンしてコードを取得してきます。</p>
+<p>ディレクトリ構成はこんな感じになっています。</p>
+<pre>handson-markdowne-editor_part1-nuxt
+├── README.md
+├── assets
+│   ├── README.md
+│   └── variables.scss
+│
+├── components    &lt;---------------★
+│   ├── CardComponent.vue
+│   ├── EditorComponent.vue
+│   ├── NewCardComponent.vue
+│   └── README.md
+│
+├── layouts
+│   ├── README.md
+│   ├── default.vue
+│   └── error.vue
+│
+├── middleware
+│   └── README.md
+│
+├── nuxt.config.js
+├── package-lock.json
+├── package.json
+│
+├── pages        &lt;---------------★
+│   ├── README.md
+│   ├── _id.vue.markingcloud
+│   ├── home.vue.markingcloud
+│   └── index.vue.markingcloud
+│
+├── plugins
+│   ├── README.md
+│   └── localStorage.js
+│
+├── static
+│   ├── README.md
+│   ├── favicon.ico
+│   └── markingcloud-icon.png
+│
+└── store        &lt;---------------★
+    ├── README.md
+    └── memos.js</pre>
+<h2 is-upgraded><strong>うまく開かない</strong><strong>場合は</strong></h2>
+<aside class="warning"><p><strong>うまく開かない場合</strong>は<a href="https://shell.cloud.google.com/" target="_blank"><paper-button class="colored" raised>Cloud Shell</paper-button></a>に移動してから以下打ち込んでください。</p>
+</aside>
+<p><em>code.4-1 </em><code>coludshell</code></p>
+<pre>mkdir cloudshell_open
+cd cloudshell_open
+git clone https://github.com/MarkingCloud/handson-markdowne-editor_part1-nuxt.git
+cd handson-markdowne-editor_part1-nuxt</pre>
+<h2 is-upgraded><strong>2.npmモジュールのインストール</strong></h2>
+<p>nodeのバージョンを揃えます。</p>
+<p>以下コマンドを実行して、バージョンがv14.15.0となっていることを確認しください。</p>
+<p><em>code.4-2 </em><code>coludshell</code></p>
+<pre>nvm install v14.15.0
+nvm use v14.15.0
+node --version</pre>
+<p>npmモジュールをインストールします。</p>
+<p>次のコマンドを実行してください。</p>
+<p><em>code.4-3 </em><code>coludshell</code></p>
+<pre>npm install</pre>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Pagesを使ってみる" duration="0">
+        <p>Pages/を編集してメインになるページを表示しましょう。</p>
+<p class="image-container"><img style="width: 601.70px" src="img/95a7431735b8e58f.png"></p>
+<p>ディレクトリ構成イメージ</p>
+<h2 is-upgraded><strong>1.ローカルで立ち上げてみる</strong></h2>
+<p>Nuxtのwebサーバ機能を使ってローカルでアプリを立ち上げてみましょう。</p>
+<p>次の操作を行って下さい</p>
+<ul>
+<li>次のコマンドを実行する。</li>
+</ul>
+<p><em>code.5-1 </em><code>coludshell</code></p>
+<pre>npm run dev</pre>
+<ul>
+<li>出力されたURLをクリックする。</li>
+</ul>
+<p class="image-container"><img style="width: 453.00px" src="img/872c9752d6bd5477.png"></p>
+<aside class="warning"><p><strong>注意: </strong>URLはcopy&amp;pastせずクリックしてください</p>
+</aside>
+<p>以下のようなページが表示されます。</p>
+<p>まだPages/の中身が空なので、メインになるページが表示されません。</p>
+<p class="image-container"><img style="width: 601.70px" src="img/2029b74372853f2a.png"></p>
+<h2 is-upgraded><strong>2.Indexページ作成</strong></h2>
+<p>index.htmlに当たるページを作成してみましょう。</p>
+<p>次の操作を行ってください。</p>
+<ul>
+<li>webサーバーにしているshellはそのままで、新しいタブを開く。</li>
+</ul>
+<p class="image-container"><img style="width: 601.70px" src="img/b3176dec1f342022.png"></p>
+<ul>
+<li>次のコマンドを実行して作業ディレクトリを移動する。</li>
+</ul>
+<p><em>code.5-2 </em><code>coludshell</code></p>
+<pre>cd ~/cloudshell_open/handson-markdowne-editor_part1-nuxt/</pre>
+<ul>
+<li>次のコマンドを実行してindex.vueファイルを作成する。</li>
+</ul>
+<p><em>code.5-3 </em><code>coludshell</code></p>
+<pre>mv pages/index.vue.markingcloud pages/index.vue</pre>
+<ul>
+<li>開いているページをリロードする。</li>
+</ul>
+<p>次のようなページが生成されます。</p>
+<p>URLのルート(‘/&#39;)にindex.vueが割り当てられました。</p>
+<p class="image-container"><img style="width: 601.70px" src="img/7d8b860c1c236528.png"></p>
+<h2 is-upgraded><strong>3.HOMEページ作成（静的ルーティング）</strong></h2>
+<p>index以外のページを作成してみましょう。</p>
+<p>次の操作を行って下さい。</p>
+<ul>
+<li>次のコマンドを実行してhome.vueファイルを作成する。</li>
+</ul>
+<p><em>code.5-4 </em><code>coludshell</code></p>
+<pre>mv pages/home.vue.markingcloud pages/home.vue</pre>
+<ul>
+<li>開いているページにてURLに「ルートURL/home」を打ち込み移動する。</li>
+</ul>
+<p class="image-container"><img style="width: 601.70px" src="img/129c2f3a84eeeabb.png"></p>
+<p>次のようなページが生成されます。</p>
+<p class="image-container"><img style="width: 601.70px" src="img/673abf4e661de1c9.png"></p>
+<p>この時、<strong>/homeへのパスは自動で生成されています</strong>。（えっ）</p>
+<p>試しに他の名前にファイル名を変更してみましょう。</p>
+<p>次の操作を行って下さい。</p>
+<ul>
+<li>次のコマンドを実行しする。</li>
+</ul>
+<p><em>code.5-5 </em><code>coludshell</code></p>
+<pre>mv pages/home.vue pages/hoge.vue</pre>
+<p>開いているページへ反映されるはずです。</p>
+<h2 is-upgraded><strong>4.Editorページ作成（動的ルーティング）</strong></h2>
+<p>Edirotページとして動的なIDに対応するページを作成してみましょう。</p>
+<p>次の操作を行って下さい。</p>
+<ul>
+<li>次のコマンドを実行して_id.vueファイルを作成する。</li>
+</ul>
+<p><em>code.5-6 </em><code>coludshell</code></p>
+<pre>mv pages/_id.vue.markingcloud pages/_id.vue</pre>
+<ul>
+<li>開いているページにてURLに「ルートURL/適当な値」を打ち込み移動する。</li>
+</ul>
+<p>次のようなページが生成されます。</p>
+<p class="image-container"><img style="width: 601.70px" src="img/58003fc0520387ff.png"></p>
+<p>この時<strong>アンダーバー(‘_&#39;)がついているファイルが動的なURLに対応するファイル</strong>となっており、</p>
+<p><strong>動的なルーティングのパスも自動で生成されています</strong>。（えぇ、、、）</p>
+<p>このルーティングの自動生成はNuxtの大きな特徴です。</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Componentsを使ってみる" duration="0">
+        <p>コンポーネント指向について理解しましょう。</p>
+<p class="image-container"><img style="width: 601.70px" src="img/6ff29ee2e2399d65.png"></p>
+<h2 is-upgraded><strong>1.コンポーネントの使いどころ</strong></h2>
+<p>コンポーネントが利用されていることを確認しましょう。</p>
+<p>次の操作を行ってください。</p>
+<ul>
+<li>次のファイルを確認する。</li>
+<li>pages/index.vue</li>
+<li>components/NewCardComponent.vue</li>
+<li>components/CardComponent.vue</li>
+</ul>
+<p><code>pages/index.vue</code></p>
+<pre>&lt;template&gt;
+  &lt;v-row&gt;
+    &lt;!-- テキスト追加カード --&gt;
+    &lt;v-col cols=&#34;3&#34;&gt;
+      &lt;NewCardComponent /&gt;
+    &lt;/v-col&gt;
+    &lt;!-- カードリスト --&gt;
+    &lt;v-col v-for=&#34;memo in memos&#34; :key=&#34;memo.id&#34; cols=&#34;3&#34;&gt;
+      &lt;CardComponent :memo=&#34;memo&#34; /&gt;
+    &lt;/v-col&gt;
+  &lt;/v-row&gt;
+&lt;/template&gt;</pre>
+<p class="image-container"><img style="width: 601.70px" src="img/ad4eb50cec408a13.png"></p>
+<p>要素をコンポーネント化することで、コードと画面の構造が一致して理解しやすくなっていると思います。</p>
+<p>また、Components/に.vueファイルを作成することで、自動でコンポーネントとして利用できるようになります。</p>
+<p>さらにPages側で<strong>import文が不要</strong>で、ファイルの名前でそのまま利用できるようになります。</p>
+<h2 is-upgraded><strong>2.コンポーネントのコメントアウト解除</strong></h2>
+<p>_id.vueにてEditorComponentのコメントアウトを解除して、画面を完成させましょう。</p>
+<p>次の操作を行ってください。</p>
+<ul>
+<li>pages/_id.vue次の通り編集する</li>
+<li>L5のコメントアウトを解除</li>
+<li>L4をコメントアウト</li>
+</ul>
+<p><em>code.6-1 </em><code>pages/_id.vue</code></p>
+<pre>&lt;template&gt;
+  &lt;v-row&gt;
+    &lt;v-col cols=&#34;12&#34;&gt;
+      &lt;!-- &lt;span&gt; このページのIDは「&#123;&#123; id }}」です。&lt;/span&gt; --&gt;
+      &lt;EditorComponent /&gt;
+    &lt;/v-col&gt;
+  &lt;/v-row&gt;
+&lt;/template&gt;</pre>
+<p>次のようなページが作成されます。</p>
+<p class="image-container"><img style="width: 601.70px" src="img/a674662a100fb970.png"></p>
+<aside class="special"><p>ちなみにこのMarkdownEditorは<a href="https://github.com/nhn/tui.editor" target="_blank">TOAST UI Editor</a>を利用しています。</p>
+</aside>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Storeを使ってみる" duration="0">
+        <p>Storeを使ってデータの呼び出しと保存を行いましょう。</p>
+<p class="image-container"><img style="width: 601.70px" src="img/3b78cd63e7604d0f.png"></p>
+<h2 is-upgraded><strong>1.Storeとは？</strong></h2>
+<p>Nuxtの状態管理ツール。ほぼVuexと思ってもらって良いと思います。</p>
+<p>データをここに入れておくことで、Pages/、Componets/、Layout/ などいろいろな場所から自由に呼び出すことができます。</p>
+<p class="image-container"><img style="width: 601.70px" src="img/65738eb9dfdf9be7.png"></p>
+<p>Fluxというアーキテクチャを採用しており、仕組みがちょっと難しい。</p>
+<h2 is-upgraded><strong>2.state作成</strong></h2>
+<p>データをオブジェクトや配列の形で保持しておきたいときはstateに記入します。</p>
+<p>MarkdownEditrの初期値を作成してみましょう。</p>
+<p>次の操作を行ってください。</p>
+<ul>
+<li>store/memos.jsを次の通り編集する</li>
+<li>L4～L51のコメントアウトを解除</li>
+</ul>
+<p><em>code.7-1 </em><code>store/memos.js</code></p>
+<pre>// データ格納
+export const state = () =&gt; ({
+  list: [
+    {
+      id: &#39;id1&#39;,
+      data: {
+        title: &#39;# ハンズオン~Nuxt編~&#39;,
+        timestamp: &#39;2021-04-20 19:30&#39;,
+        text: `# ハンズオ~Nuxt編~
+
+    ## **コンテンツ**
+
+    ### **ハンズオン形式でアプリ作成の流れを学ぼう！**
+
+    ![](https://github.com/MarkingCloud/handson-markdowne-editor/raw/image/nuxt_20210406_1903.png)
+
+    今回から新年度の新たな試みとして、**3部構成のシリーズイベント**を行います！
+    このシリーズでは「爆速アプリ開発」などの記事でよく見かける **Nuxt.js × Firebase** の組み合わせと、
+    CI/CDツールの **GitHub Actions** を使って、マークダウンエディタを題材にアプリ作成のハンズオンを行います。
+
+    今回は **Nuxt編** ！
+    初見だと混乱しがちな機能を整理しつつ、一緒にフロントエンドの機能を作成していきましょう！
+
+    ハンズオンでは以下のサービスを使う予定です。
+
+    - GCP Cloud Shell Editor
+    - Vue.js
+    - Nuxt.js
+
+    （※ Vue, Nuxt に詳しめの方には物足りない内容になります。ご了承ください。）
+
+    **第2弾はこちら！** → [【Nuxt×Firebase×GitHubActions】アプリ作成ハンズオン〜Firebase〜編](https://markingcloud.connpass.com/event/208934/)
+    **第3弾はこちら！** → [【Nuxt×Firebase×GitHubActions】アプリ作成ハンズオン〜CI/CD編〜](https://markingcloud.connpass.com/event/208935/)`,
+      },
+    },
+    {
+      id: &#39;id2&#39;,
+      data: {
+        title: &#39;title&#39;,
+        timestamp: &#39;2021-04-21 19:30&#39;,
+        text: &#39;test text 1\n&#39;,
+      },
+    },
+    {
+      id: &#39;id3&#39;,
+      data: {
+        title: &#39;title&#39;,
+        timestamp: &#39;2021-04-22 19:30&#39;,
+        text: &#39;test text 2\n&#39;,
+      },
+    },
+  ],
+})</pre>
+<ul>
+<li>pages/index.vueを次の通り編集する</li>
+<li>L17～L22のコメントアウトを解除</li>
+</ul>
+<p><em>code.7-2 </em><code>pages/index.vue</code></p>
+<pre>&lt;script&gt;
+export default {
+  // 処理結果を変数へ格納
+  computed: {
+    memos() {
+      // store/memos.js/listを取得
+      return this.$store.state.memos.list
+    },
+  },
+}
+&lt;/script&gt;</pre>
+<p>初期値が入力されたことで、カードが出現します。</p>
+<p class="image-container"><img style="width: 601.70px" src="img/ad4eb50cec408a13.png"></p>
+<p>ポイントは<code>this.$store.state</code>で、Storeへアクセスできるところです。</p>
+<p>ここでも<strong>importなどの呼び出しの処理は不要</strong>です。</p>
+<h2 is-upgraded><strong>3.mutations/actions作成</strong></h2>
+<p>stateの値を編集するためにmutationsとactionsを作成します。</p>
+<p>Fluxではデータの整合性を保つため、storeはmutationsからの編集しか受付ません。</p>
+<p>さらに、非同期処理はmutationsで利用できず、actionsに記述する必要があります。</p>
+<p>このmuationsとactionsをComponents/などから呼び出すことで、stateを操作します。</p>
+<p>次の操作を行ってください。</p>
+<ul>
+<li>store/memos.jsを次の通り編集する</li>
+<li>L57～L70のコメントアウトを解除</li>
+<li>L75～L79のコメントアウトを解除</li>
+</ul>
+<p><em>code.7-3 </em><code>store/memos.js</code></p>
+<pre>// データを操作する(同期的処理)
+export const mutations = {
+  // ID検索と編集/要素追加
+  save(state, { id, data }) {
+    const target = state.list.find((item) =&gt; item.id === id)
+    if (target) {
+      target.data = data
+    } else {
+      state.list.push({ id, data })
+    }
+  },
+  // 要素削除
+  remove(state, id) {
+    const index = state.list.findIndex((item) =&gt; item.id === id)
+    state.list.splice(index, 1)
+  },
+}
+
+// 非同期処理を実行する
+export const actions = {
+  // list更新＆DB通信を模して1秒待機
+  async saveLocalMemo(context, { newid, newdata }) {
+    context.commit(&#39;save&#39;, { id: newid, data: newdata })
+    await new Promise((resolve) =&gt; setTimeout(resolve, 1000))
+  },
+}</pre>
+<p>コレでstateの中を編集できるようになりました！</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="おわりに" duration="0">
+        <h2 is-upgraded><strong>アンケート</strong></h2>
+<p>最後にアンケートがありますので、より良い勉強会作りのためにご協力お願い致します。</p>
+<aside class="special"><h2 is-upgraded>MarkingCloudをフォロー！</h2>
+<h3 is-upgraded><strong>Twitterやってます！</strong></h3>
+<p>MarkingCloudメンバーで<a href="https://twitter.com/MarkingCloud" target="_blank">Twitter</a>をやってます。</p>
+<p>クラウド関連の情報や、その他(キングダム、左利きのエレンなど)を不定期でつぶやきます。</p>
+<p>よろしければのぞいてみてください！(フォローもお願いします！)</p>
+<h3 is-upgraded><strong>(株)アイソルートのHPです！</strong></h3>
+<p>運営スタッフが所属する<a href="https://www.isoroot.jp/" target="_blank">(株)アイソルートのHP</a>です。</p>
+<p>一緒にお仕事できそうな方、転職を考えている方など、</p>
+<p>よろしければのぞいてみて下さい！</p>
+<h3 is-upgraded><strong>ブログやってます！</strong></h3>
+<p>運営スタッフの所属する<a href="https://www.isoroot.jp/blog/" target="_blank">(株)アイソルートの仲間たちが書いてるブログ</a>です。</p>
+<p>以下のような雑多なテーマでいろいろ書いています。</p>
+<p>よろしければのぞいてみてください！</p>
+<ul>
+<li>Amazon Web Services(3)</li>
+<li>DevOps(9)</li>
+<li>Google Cloud Platform(33)</li>
+<li>Microsoft Azure(4)</li>
+<li>Web開発(7)</li>
+<li>アジャイル(4)</li>
+<li>インフラ(9)</li>
+<li>スマートスピーカー(3)</li>
+<li>チャットボット(3)</li>
+<li>ネットワーク(7)</li>
+<li>モバイル開発(20)</li>
+<li>レポート(8)</li>
+<li>記事(5)</li>
+</ul>
+<h3 is-upgraded><strong>コミュトレ！</strong></h3>
+<p>運営スタッフの所属する(株)アイソルートが提供している<a href="https://commu-training.isoroot.jp/" target="_blank">「コミュトレ」</a>という教育サービスです！</p>
+<p>社会人のコミュニケーション能力のトレーニングを行うサービスです。</p>
+<p>面白いサービスですのでぜひ見てみて下さい！</p>
+</aside>
+
+
+      </google-codelab-step>
+    
+  </google-codelab>
+
+  <script src="https://storage.googleapis.com/codelab-elements/native-shim.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/custom-elements.min.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/prettify.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/codelab-elements.js"></script>
+  <script src="//support.google.com/inapp/api.js"></script>
+
+</body>
+</html>
