@@ -46,18 +46,12 @@ module.exports = {
         link: 'https://v1.vuepress.vuejs.org'
       }
     ],
-    sidebar: {
-      '/guide/': [
-        {
-          title: 'Guide',
-          collapsable: false,
-          children: [
-            '',
-            'using-vue',
-          ]
-        }
-      ],
-    }
+    sidebar: 
+    {
+      title: "1.はじめに",
+      path: "/config/",
+      collapsable: false
+    },
   },
 
   /**
@@ -67,6 +61,6 @@ module.exports = {
     '@vuepress/plugin-back-to-top',
     '@vuepress/plugin-medium-zoom',
   ],
-  dest: '../curriculums/',
+  dest: 'curriculums/',
   base: '/handson-markdowne-editor_part1-nuxt/vuepress/curriculums/',
 }
