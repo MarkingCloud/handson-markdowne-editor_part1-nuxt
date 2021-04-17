@@ -62,5 +62,5 @@ module.exports = {
     '@vuepress/plugin-medium-zoom',
   ],
   dest: 'curriculums/',
-  base: '/handson-markdowne-editor_part1-nuxt/vuepress/curriculums/',
+  base: '/handson-markdowne-editor_part1-nuxt/vuepress/docs/curriculums/',
 }
