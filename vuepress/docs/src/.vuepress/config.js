@@ -46,12 +46,13 @@ module.exports = {
         link: 'https://v1.vuepress.vuejs.org'
       }
     ],
-    sidebar: 
-    {
-      title: "1.はじめに",
-      path: "/config/",
-      collapsable: false
-    },
+    sidebar: [
+      {
+        title: "1.はじめに",
+        path: "/config/",
+        collapsable: false
+      },
+    ]
   },
 
   /**
