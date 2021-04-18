@@ -31,7 +31,7 @@
         <h2 is-upgraded><strong>概要</strong></h2>
 <p>実際にマークダウンエディタを作りながら、Nuxt、Firebase、GitHubActionsの使い方を学びましょう！</p>
 <p class="image-container"><img style="width: 601.70px" src="img/9001598438a1eb01.png"></p>
-<p><a href="https://markingcloud.github.io/handson-markdowne-editor_part1-nuxt/public/" target="_blank"><paper-button class="colored" raised>サンプルアプリ</paper-button></a></p>
+<p><a href="https://markingcloud.github.io/handson-markdowne-editor_part1-nuxt/public/" target="_blank"><paper-button class="colored" raised>アプリイメージ</paper-button></a></p>
 <h2 class="checklist" is-upgraded><strong>What you&#39;ll learn</strong></h2>
 <ul class="checklist">
 <li>Vue.js, Nuxt.jsとは何か(ちょっと)分かる</li>
@@ -50,8 +50,7 @@
 <h2 is-upgraded><strong>Nuxt.jsのディレクトリの役割が(ちょっと)分かる</strong></h2>
 <p>初見でまず混乱するNuxtのディレクトリ構成を今回利用するものをメインに解説します。</p>
 <p>各ディレクトリ構成の役割がなんとなく分かります。</p>
-<p class="image-container"><img style="width: 601.70px" src="img/ccfac12ed1304287.png"></p>
-<p><a href="https://ja.nuxtjs.org/docs/2.x/concepts/views" target="_blank">Nuxt.js でのビューの構成</a></p>
+<p class="image-container"><img style="width: 601.70px" src="img/ab4320e94ab33313.png"></p>
 <h2 is-upgraded><strong>Pages, Components, Storeの使い方が(ちょっと)分かる</strong></h2>
 <p>今回のハンズオンの中では主にPages. Components, Storeの機能を利用します。</p>
 <p>これらの使い方がふんわりと理解できます。</p>
@@ -167,8 +166,7 @@ node --version</pre>
     
       <google-codelab-step label="Pagesを使ってみる" duration="0">
         <p>Pages/を編集してメインになるページを表示しましょう。</p>
-<p class="image-container"><img style="width: 601.70px" src="img/95a7431735b8e58f.png"></p>
-<p>ディレクトリ構成イメージ</p>
+<p class="image-container"><img style="width: 601.70px" src="img/cd93e140b0554ac3.png"></p>
 <h2 is-upgraded><strong>1.ローカルで立ち上げてみる</strong></h2>
 <p>Nuxtのwebサーバ機能を使ってローカルでアプリを立ち上げてみましょう。</p>
 <p>次の操作を行って下さい</p>
@@ -223,7 +221,8 @@ node --version</pre>
 <p class="image-container"><img style="width: 601.70px" src="img/129c2f3a84eeeabb.png"></p>
 <p>次のようなページが生成されます。</p>
 <p class="image-container"><img style="width: 601.70px" src="img/673abf4e661de1c9.png"></p>
-<p>この時、<strong>/homeへのパスは自動で生成されています</strong>。（えっ）</p>
+<p>Nuxtではpages/の中に作成した<strong>ファイル名がそのままURLのパス</strong>となり、</p>
+<p>その<strong>パスへのルーティングは自動で生成されます</strong>。</p>
 <p>試しに他の名前にファイル名を変更してみましょう。</p>
 <p>次の操作を行って下さい。</p>
 <ul>
@@ -233,7 +232,7 @@ node --version</pre>
 <pre>mv pages/home.vue pages/hoge.vue</pre>
 <p>開いているページへ反映されるはずです。</p>
 <h2 is-upgraded><strong>4.Editorページ作成（動的ルーティング）</strong></h2>
-<p>Edirotページとして動的なIDに対応するページを作成してみましょう。</p>
+<p>Editorページとして動的なIDに対応するページを作成してみましょう。</p>
 <p>次の操作を行って下さい。</p>
 <ul>
 <li>次のコマンドを実行して_id.vueファイルを作成する。</li>
@@ -245,16 +244,17 @@ node --version</pre>
 </ul>
 <p>次のようなページが生成されます。</p>
 <p class="image-container"><img style="width: 601.70px" src="img/58003fc0520387ff.png"></p>
-<p>この時<strong>アンダーバー(‘_&#39;)がついているファイルが動的なURLに対応するファイル</strong>となっており、</p>
-<p><strong>動的なルーティングのパスも自動で生成されています</strong>。（えぇ、、、）</p>
+<p>Nuxtでは<strong>アンダーバー(‘_&#39;)を付けたファイルが動的なURLに対応します。</strong></p>
+<p><strong>動的なルーティングのパスも自動で生成されています</strong>。</p>
 <p>このルーティングの自動生成はNuxtの大きな特徴です。</p>
+<p>ここまででメインコンテンツに必要な</p>
 
 
       </google-codelab-step>
     
       <google-codelab-step label="Componentsを使ってみる" duration="0">
         <p>コンポーネント指向について理解しましょう。</p>
-<p class="image-container"><img style="width: 601.70px" src="img/6ff29ee2e2399d65.png"></p>
+<p class="image-container"><img style="width: 601.70px" src="img/f1a48232d10ebf9e.png"></p>
 <h2 is-upgraded><strong>1.コンポーネントの使いどころ</strong></h2>
 <p>コンポーネントが利用されていることを確認しましょう。</p>
 <p>次の操作を行ってください。</p>
@@ -300,20 +300,20 @@ node --version</pre>
 &lt;/template&gt;</pre>
 <p>次のようなページが作成されます。</p>
 <p class="image-container"><img style="width: 601.70px" src="img/a674662a100fb970.png"></p>
-<aside class="special"><p>ちなみにこのMarkdownEditorは<a href="https://github.com/nhn/tui.editor" target="_blank">TOAST UI Editor</a>を利用しています。</p>
-</aside>
 
 
       </google-codelab-step>
     
       <google-codelab-step label="Storeを使ってみる" duration="0">
         <p>Storeを使ってデータの呼び出しと保存を行いましょう。</p>
-<p class="image-container"><img style="width: 601.70px" src="img/3b78cd63e7604d0f.png"></p>
+<p class="image-container"><img style="width: 601.70px" src="img/f0d033912a7b9c53.png"></p>
 <h2 is-upgraded><strong>1.Storeとは？</strong></h2>
 <p>Nuxtの状態管理ツール。ほぼVuexと思ってもらって良いと思います。</p>
-<p>データをここに入れておくことで、Pages/、Componets/、Layout/ などいろいろな場所から自由に呼び出すことができます。</p>
-<p class="image-container"><img style="width: 601.70px" src="img/65738eb9dfdf9be7.png"></p>
-<p>Fluxというアーキテクチャを採用しており、仕組みがちょっと難しい。</p>
+<p>データをここに入れておくことで、pages/、componets/などいろいろな場所から自由に呼び出すことができます。</p>
+<p>アーキテクチャは<a href="https://github.com/facebook/flux/tree/master/examples/flux-concepts" target="_blank">Flux</a>を採用しています。</p>
+<p>MVCモデルの課題を解消する新しいデータ管理の考え方です。</p>
+<p>（Fluxについては<a href="https://qiita.com/knhr__/items/5fec7571dab80e2dcd92" target="_blank">こちらの記事</a>が分かりやすかったです。）</p>
+<p class="image-container"><img style="width: 601.70px" src="img/91830e1aa0ae482e.png"></p>
 <h2 is-upgraded><strong>2.state作成</strong></h2>
 <p>データをオブジェクトや配列の形で保持しておきたいときはstateに記入します。</p>
 <p>MarkdownEditrの初期値を作成してみましょう。</p>
@@ -398,9 +398,13 @@ export default {
 <p>ここでも<strong>importなどの呼び出しの処理は不要</strong>です。</p>
 <h2 is-upgraded><strong>3.mutations/actions作成</strong></h2>
 <p>stateの値を編集するためにmutationsとactionsを作成します。</p>
-<p>Fluxではデータの整合性を保つため、storeはmutationsからの編集しか受付ません。</p>
-<p>さらに、非同期処理はmutationsで利用できず、actionsに記述する必要があります。</p>
-<p>このmuationsとactionsをComponents/などから呼び出すことで、stateを操作します。</p>
+<p>Fluxではデータの整合性を保つため、<strong>stateを直接編集することができません</strong>。</p>
+<ul>
+<li>action → mutations → state</li>
+<li>mutations → state</li>
+</ul>
+<p>のどちらかでデータを編集する必要があります。</p>
+<p class="image-container"><img style="width: 601.70px" src="img/65738eb9dfdf9be7.png"></p>
 <p>次の操作を行ってください。</p>
 <ul>
 <li>store/memos.jsを次の通り編集する</li>
@@ -435,17 +439,32 @@ export const actions = {
   },
 }</pre>
 <p>コレでstateの中を編集できるようになりました！</p>
+<p>再度ページを更新してサービスの動作確認を行ってみてください。</p>
+<p>更新した値が反映されたり、カードの追加/削除機能が実装できているはずです。</p>
 
 
       </google-codelab-step>
     
       <google-codelab-step label="おわりに" duration="0">
-        <h2 is-upgraded><strong>アンケート</strong></h2>
+        <p>Nuxtを使ってMarkdownEditorを作成することができました。</p>
+<p>ただし、まだデータの永続化やサービスの公開が出来ていません。</p>
+<h2 is-upgraded><strong>次回予告</strong></h2>
+<p>次回は～Firebase編～となります。</p>
+<p class="image-container"><img style="width: 601.70px" src="img/c0fb5456f945f8ef.png"></p>
+<p>次のテーマのコンテンツを予定しています。</p>
+<ul>
+<li>Firebaseとは</li>
+<li>nuxt/firebaseを導入する</li>
+<li>Firestoreを使ってみる</li>
+<li>Hostingを使ってみる</li>
+</ul>
+<p>お楽しみに！</p>
+<h2 is-upgraded><strong>アンケート</strong></h2>
 <p>最後にアンケートがありますので、より良い勉強会作りのためにご協力お願い致します。</p>
 <aside class="special"><h2 is-upgraded>MarkingCloudをフォロー！</h2>
 <h3 is-upgraded><strong>Twitterやってます！</strong></h3>
 <p>MarkingCloudメンバーで<a href="https://twitter.com/MarkingCloud" target="_blank">Twitter</a>をやってます。</p>
-<p>クラウド関連の情報や、その他(キングダム、左利きのエレンなど)を不定期でつぶやきます。</p>
+<p>クラウド関連の情報や、その他(キングダム、左ききのエレンなど)を不定期でつぶやきます。</p>
 <p>よろしければのぞいてみてください！(フォローもお願いします！)</p>
 <h3 is-upgraded><strong>(株)アイソルートのHPです！</strong></h3>
 <p>運営スタッフが所属する<a href="https://www.isoroot.jp/" target="_blank">(株)アイソルートのHP</a>です。</p>
