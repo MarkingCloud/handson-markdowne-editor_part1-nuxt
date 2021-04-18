@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>7. Store を使ってみる | アプリ作成ハンズオン〜Nuxt編〜</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    
+    <meta name="description" content="">
+    <meta name="theme-color" content="#3eaf7c">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    
+    <link rel="preload" href="/handson-markdowne-editor_part1-nuxt/vuepress/docs/curriculums/assets/css/0.styles.3044d8e9.css" as="style"><link rel="preload" href="/handson-markdowne-editor_part1-nuxt/vuepress/docs/curriculums/assets/js/app.e073de04.js" as="script"><link rel="preload" href="/handson-markdowne-editor_part1-nuxt/vuepress/docs/curriculums/assets/js/2.c785c219.js" as="script"><link rel="preload" href="/handson-markdowne-editor_part1-nuxt/vuepress/docs/curriculums/assets/js/16.47131369.js" as="script"><link rel="prefetch" href="/handson-markdowne-editor_part1-nuxt/vuepress/docs/curriculums/assets/js/10.82d614cb.js"><link rel="prefetch" href="/handson-markdowne-editor_part1-nuxt/vuepress/docs/curriculums/assets/js/11.a19594c5.js"><link rel="prefetch" href="/handson-markdowne-editor_part1-nuxt/vuepress/docs/curriculums/assets/js/12.cd9885c4.js"><link rel="prefetch" href="/handson-markdowne-editor_part1-nuxt/vuepress/docs/curriculums/assets/js/13.c38223b6.js"><link rel="prefetch" href="/handson-markdowne-editor_part1-nuxt/vuepress/docs/curriculums/assets/js/14.d9d1e063.js"><link rel="prefetch" href="/handson-markdowne-editor_part1-nuxt/vuepress/docs/curriculums/assets/js/15.9e2dd4fe.js"><link rel="prefetch" href="/handson-markdowne-editor_part1-nuxt/vuepress/docs/curriculums/assets/js/17.3301a32a.js"><link rel="prefetch" href="/handson-markdowne-editor_part1-nuxt/vuepress/docs/curriculums/assets/js/18.48a075aa.js"><link rel="prefetch" href="/handson-markdowne-editor_part1-nuxt/vuepress/docs/curriculums/assets/js/3.9c229156.js"><link rel="prefetch" href="/handson-markdowne-editor_part1-nuxt/vuepress/docs/curriculums/assets/js/4.4d31d94d.js"><link rel="prefetch" href="/handson-markdowne-editor_part1-nuxt/vuepress/docs/curriculums/assets/js/5.569bfa89.js"><link rel="prefetch" href="/handson-markdowne-editor_part1-nuxt/vuepress/docs/curriculums/assets/js/6.498ab014.js"><link rel="prefetch" href="/handson-markdowne-editor_part1-nuxt/vuepress/docs/curriculums/assets/js/7.7e550121.js"><link rel="prefetch" href="/handson-markdowne-editor_part1-nuxt/vuepress/docs/curriculums/assets/js/8.d2e62457.js"><link rel="prefetch" href="/handson-markdowne-editor_part1-nuxt/vuepress/docs/curriculums/assets/js/9.b751af4a.js">
+    <link rel="stylesheet" href="/handson-markdowne-editor_part1-nuxt/vuepress/docs/curriculums/assets/css/0.styles.3044d8e9.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/handson-markdowne-editor_part1-nuxt/vuepress/docs/curriculums/" class="home-link router-link-active"><!----> <span class="site-name">アプリ作成ハンズオン〜Nuxt編〜</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <!----></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><!---->  <ul class="sidebar-links"><li><a href="/handson-markdowne-editor_part1-nuxt/vuepress/docs/curriculums/curriculum-01/" class="sidebar-link">1. はじめに</a></li><li><a href="/handson-markdowne-editor_part1-nuxt/vuepress/docs/curriculums/curriculum-02/" class="sidebar-link">2. ハンズオンのポイント</a></li><li><a href="/handson-markdowne-editor_part1-nuxt/vuepress/docs/curriculums/curriculum-03/" class="sidebar-link">3. Vue.js / Nuxt.js とは</a></li><li><a href="/handson-markdowne-editor_part1-nuxt/vuepress/docs/curriculums/curriculum-04/" class="sidebar-link">4. 事前準備</a></li><li><a href="/handson-markdowne-editor_part1-nuxt/vuepress/docs/curriculums/curriculum-05/" class="sidebar-link">5. Pagesを使ってみる</a></li><li><a href="/handson-markdowne-editor_part1-nuxt/vuepress/docs/curriculums/curriculum-06/" class="sidebar-link">6. Componentsを使ってみる</a></li><li><a href="/handson-markdowne-editor_part1-nuxt/vuepress/docs/curriculums/curriculum-07/" aria-current="page" class="active sidebar-link">7. Storeを使ってみる</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/handson-markdowne-editor_part1-nuxt/vuepress/docs/curriculums/curriculum-07/#_1-store-とは" class="sidebar-link">1. Store とは？</a></li><li class="sidebar-sub-header"><a href="/handson-markdowne-editor_part1-nuxt/vuepress/docs/curriculums/curriculum-07/#_2-state-作成" class="sidebar-link">2. state 作成</a></li><li class="sidebar-sub-header"><a href="/handson-markdowne-editor_part1-nuxt/vuepress/docs/curriculums/curriculum-07/#_3-mutations-actions-作成" class="sidebar-link">3. mutations/actions 作成</a></li></ul></li><li><a href="/handson-markdowne-editor_part1-nuxt/vuepress/docs/curriculums/curriculum-08/" class="sidebar-link">8. おわりに</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="_7-store-を使ってみる"><a href="#_7-store-を使ってみる" class="header-anchor">#</a> 7. Store を使ってみる</h1> <p>Store を使ってデータの呼び出しと保存を行いましょう。</p> <p><img src="/store.png" alt=""></p> <h2 id="_1-store-とは"><a href="#_1-store-とは" class="header-anchor">#</a> 1. Store とは？</h2> <p>Nuxt の状態管理ツール。ほぼ Vuex と思ってもらって良いと思います。<br>
+データをここに入れておくことで、pages/、componets/などいろいろな場所から自由に呼び出すことができます。</p> <p>アーキテクチャは<a href="https://github.com/facebook/flux/tree/master/examples/flux-concepts" target="_blank" rel="noopener noreferrer">Flux<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>を採用しています。<br>
+MVC モデルの課題を解消する新しいデータ管理の考え方です。<br>
+（Flux については<a href="https://qiita.com/knhr__/items/5fec7571dab80e2dcd92" target="_blank" rel="noopener noreferrer">こちらの記事<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>が分かりやすかったです。）</p> <p><img src="/flux.png" alt=""></p> <h2 id="_2-state-作成"><a href="#_2-state-作成" class="header-anchor">#</a> 2. state 作成</h2> <p>データをオブジェクトや配列の形で保持しておきたいときは state に記入します。<br>
+MarkdownEditr の初期値を作成してみましょう。</p> <p>次の操作を行ってください。</p> <ul><li>store/memos.js を次の通り編集する
+<ul><li>L4 ～ L51 のコメントアウトを解除</li></ul></li></ul> <p><code>code.7-1</code> <em>store/memos.js</em></p> <div class="language-js extra-class"><div class="highlight-lines"><br><br><br><div class="highlighted"> </div><div class="highlighted"> </div><div class="highlighted"> </div><div class="highlighted"> </div><div class="highlighted"> </div><div class="highlighted"> </div><div class="highlighted"> </div><div class="highlighted"> </div><div class="highlighted"> </div><div class="highlighted"> </div><div class="highlighted"> </div><div class="highlighted"> </div><div class="highlighted"> </div><div class="highlighted"> </div><div class="highlighted"> </div><div class="highlighted"> </div><div class="highlighted"> </div><div class="highlighted"> </div><div class="highlighted"> </div><div class="highlighted"> </div><div class="highlighted"> </div><div class="highlighted"> </div><div class="highlighted"> </div><div class="highlighted"> </div><div class="highlighted"> </div><div class="highlighted"> </div><div class="highlighted"> </div><div class="highlighted"> </div><div class="highlighted"> </div><div class="highlighted"> </div><div class="highlighted"> </div><div class="highlighted"> </div><div class="highlighted"> </div><div class="highlighted"> </div><div class="highlighted"> </div><div class="highlighted"> </div><div class="highlighted"> </div><div class="highlighted"> </div><div class="highlighted"> </div><div class="highlighted"> </div><div class="highlighted"> </div><div class="highlighted"> </div><div class="highlighted"> </div><div class="highlighted"> </div><div class="highlighted"> </div><div class="highlighted"> </div><div class="highlighted"> </div><div class="highlighted"> </div><br><br><br></div><pre class="language-js"><code><span class="token comment">// データ格納</span>
+<span class="token keyword">export</span> <span class="token keyword">const</span> <span class="token function-variable function">state</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">(</span><span class="token punctuation">{</span>
+  list<span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token punctuation">{</span>
+      id<span class="token operator">:</span> <span class="token string">'id1'</span><span class="token punctuation">,</span>
+      data<span class="token operator">:</span> <span class="token punctuation">{</span>
+        title<span class="token operator">:</span> <span class="token string">'# ハンズオン~Nuxt編~'</span><span class="token punctuation">,</span>
+        timestamp<span class="token operator">:</span> <span class="token string">'2021-04-20 19:30'</span><span class="token punctuation">,</span>
+        text<span class="token operator">:</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string"># ハンズオ~Nuxt編~
+
+    ## **コンテンツ**
+
+    ### **ハンズオン形式でアプリ作成の流れを学ぼう！**
+
+    ![](https://github.com/MarkingCloud/handson-markdowne-editor/raw/image/nuxt_20210406_1903.png)
+
+    今回から新年度の新たな試みとして、**3部構成のシリーズイベント**を行います！
+    このシリーズでは「爆速アプリ開発」などの記事でよく見かける **Nuxt.js × Firebase** の組み合わせと、
+    CI/CDツールの **GitHub Actions** を使って、マークダウンエディタを題材にアプリ作成のハンズオンを行います。
+
+    今回は **Nuxt編** ！
+    初見だと混乱しがちな機能を整理しつつ、一緒にフロントエンドの機能を作成していきましょう！
+
+    ハンズオンでは以下のサービスを使う予定です。
+
+    - GCP Cloud Shell Editor
+    - Vue.js
+    - Nuxt.js
+
+    （※ Vue, Nuxt に詳しめの方には物足りない内容になります。ご了承ください。）
+
+    **第2弾はこちら！** → [【Nuxt×Firebase×GitHubActions】アプリ作成ハンズオン〜Firebase〜編](https://markingcloud.connpass.com/event/208934/)
+    **第3弾はこちら！** → [【Nuxt×Firebase×GitHubActions】アプリ作成ハンズオン〜CI/CD編〜](https://markingcloud.connpass.com/event/208935/)</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">,</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">{</span>
+      id<span class="token operator">:</span> <span class="token string">'id2'</span><span class="token punctuation">,</span>
+      data<span class="token operator">:</span> <span class="token punctuation">{</span>
+        title<span class="token operator">:</span> <span class="token string">'title'</span><span class="token punctuation">,</span>
+        timestamp<span class="token operator">:</span> <span class="token string">'2021-04-21 19:30'</span><span class="token punctuation">,</span>
+        text<span class="token operator">:</span> <span class="token string">'test text 1\n'</span><span class="token punctuation">,</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">{</span>
+      id<span class="token operator">:</span> <span class="token string">'id3'</span><span class="token punctuation">,</span>
+      data<span class="token operator">:</span> <span class="token punctuation">{</span>
+        title<span class="token operator">:</span> <span class="token string">'title'</span><span class="token punctuation">,</span>
+        timestamp<span class="token operator">:</span> <span class="token string">'2021-04-22 19:30'</span><span class="token punctuation">,</span>
+        text<span class="token operator">:</span> <span class="token string">'test text 2\n'</span><span class="token punctuation">,</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">]</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><ul><li>pages/index.vue を次の通り編集する
+<ul><li>L17 ～ L22 のコメントアウトを解除</li></ul></li></ul> <p><code>code.7-2</code> <em>pages/index.vue</em></p> <div class="language-vue extra-class"><div class="highlight-lines"><br><br><br><div class="highlighted"> </div><div class="highlighted"> </div><div class="highlighted"> </div><div class="highlighted"> </div><div class="highlighted"> </div><div class="highlighted"> </div><br><br><br></div><pre class="language-vue"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript">
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  <span class="token comment">// 処理結果を変数へ格納</span>
+  computed<span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token function">memos</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token comment">// store/memos.js/listを取得</span>
+      <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span>$store<span class="token punctuation">.</span>state<span class="token punctuation">.</span>memos<span class="token punctuation">.</span>list
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><p>初期値が入力されたことで、カードが出現します。</p> <p><img src="/compleat.png" alt=""></p> <p>ポイントは<code>this.$store.state</code>で、Store へアクセスできるところです。</p> <p>ここでも<strong>import などの呼び出しの処理は不要</strong>です。</p> <h2 id="_3-mutations-actions-作成"><a href="#_3-mutations-actions-作成" class="header-anchor">#</a> 3. mutations/actions 作成</h2> <p>state の値を編集するために mutations と actions を作成します。<br>
+Flux ではデータの整合性を保つため、state を直接編集することができません。</p> <ul><li>action → mutations → state</li> <li>mutations → state</li></ul> <p>のどちらかでデータを編集する必要があります。</p> <p><img src="/vuex.png" alt=""></p> <p>次の操作を行ってください。</p> <ul><li>store/memos.js を次の通り編集する
+<ul><li>L57 ～ L70 のコメントアウトを解除</li> <li>L75 ～ L79 のコメントアウトを解除</li></ul></li></ul> <p><code>code.7-3</code> <em>store/memos.js</em></p> <div class="language-js extra-class"><div class="highlight-lines"><br><br><div class="highlighted"> </div><div class="highlighted"> </div><div class="highlighted"> </div><div class="highlighted"> </div><div class="highlighted"> </div><div class="highlighted"> </div><div class="highlighted"> </div><div class="highlighted"> </div><div class="highlighted"> </div><div class="highlighted"> </div><div class="highlighted"> </div><div class="highlighted"> </div><div class="highlighted"> </div><div class="highlighted"> </div><br><br><br><br><div class="highlighted"> </div><div class="highlighted"> </div><div class="highlighted"> </div><div class="highlighted"> </div><div class="highlighted"> </div><br><br></div><pre class="language-js"><code><span class="token comment">// データを操作する(同期的処理)</span>
+<span class="token keyword">export</span> <span class="token keyword">const</span> mutations <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token comment">// ID検索と編集/要素追加</span>
+  <span class="token function">save</span><span class="token punctuation">(</span><span class="token parameter">state<span class="token punctuation">,</span> <span class="token punctuation">{</span> id<span class="token punctuation">,</span> data <span class="token punctuation">}</span></span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> target <span class="token operator">=</span> state<span class="token punctuation">.</span>list<span class="token punctuation">.</span><span class="token function">find</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">item</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> item<span class="token punctuation">.</span>id <span class="token operator">===</span> id<span class="token punctuation">)</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>target<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      target<span class="token punctuation">.</span>data <span class="token operator">=</span> data
+    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+      state<span class="token punctuation">.</span>list<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token punctuation">{</span> id<span class="token punctuation">,</span> data <span class="token punctuation">}</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token comment">// 要素削除</span>
+  <span class="token function">remove</span><span class="token punctuation">(</span><span class="token parameter">state<span class="token punctuation">,</span> id</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> index <span class="token operator">=</span> state<span class="token punctuation">.</span>list<span class="token punctuation">.</span><span class="token function">findIndex</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">item</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> item<span class="token punctuation">.</span>id <span class="token operator">===</span> id<span class="token punctuation">)</span>
+    state<span class="token punctuation">.</span>list<span class="token punctuation">.</span><span class="token function">splice</span><span class="token punctuation">(</span>index<span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// 非同期処理を実行する</span>
+<span class="token keyword">export</span> <span class="token keyword">const</span> actions <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token comment">// list更新＆DB通信を模して1秒待機</span>
+  <span class="token keyword">async</span> <span class="token function">saveLocalMemo</span><span class="token punctuation">(</span><span class="token parameter">context<span class="token punctuation">,</span> <span class="token punctuation">{</span> newid<span class="token punctuation">,</span> newdata <span class="token punctuation">}</span></span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    context<span class="token punctuation">.</span><span class="token function">commit</span><span class="token punctuation">(</span><span class="token string">'save'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> id<span class="token operator">:</span> newid<span class="token punctuation">,</span> data<span class="token operator">:</span> newdata <span class="token punctuation">}</span><span class="token punctuation">)</span>
+    <span class="token keyword">await</span> <span class="token keyword">new</span> <span class="token class-name">Promise</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">resolve</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token function">setTimeout</span><span class="token punctuation">(</span>resolve<span class="token punctuation">,</span> <span class="token number">1000</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>コレで state の中を編集できるようになりました！<br>
+再度ページを更新してサービスの動作確認を行ってみてください。<br>
+更新した値が反映されたり、カードの追加/削除機能が実装できているはずです。</p></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/handson-markdowne-editor_part1-nuxt/vuepress/docs/curriculums/curriculum-06/" class="prev">
+        6. Componentsを使ってみる
+      </a></span> <span class="next"><a href="/handson-markdowne-editor_part1-nuxt/vuepress/docs/curriculums/curriculum-08/">
+        8. おわりに
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/handson-markdowne-editor_part1-nuxt/vuepress/docs/curriculums/assets/js/app.e073de04.js" defer></script><script src="/handson-markdowne-editor_part1-nuxt/vuepress/docs/curriculums/assets/js/2.c785c219.js" defer></script><script src="/handson-markdowne-editor_part1-nuxt/vuepress/docs/curriculums/assets/js/16.47131369.js" defer></script>
+  </body>
+</html>
