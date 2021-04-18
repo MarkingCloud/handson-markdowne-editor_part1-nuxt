@@ -4,7 +4,7 @@
 
 実際にマークダウンエディタを作りながら、Nuxt、Firebase、GitHubActions の使い方を学びましょう！
 
-![](/handson.png)
+<img :src="$withBase('/handson.png')">
 
 [**完成イメージ**](https://markingcloud.github.io/handson-markdowne-editor_part1-nuxt/public/)
 

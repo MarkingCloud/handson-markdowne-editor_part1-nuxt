@@ -3,7 +3,7 @@
 コンポーネント指向について理解しましょう。  
 要素をコンポーネント化することで、コードと画面の構造が一致して理解しやすくります。
 
-![](/components.png)
+<img :src="$withBase('/components.png')">
 
 ## 1. コンポーネントの使いどころ
 
@@ -115,7 +115,7 @@
 
     </details>
 
-![](/compleat.png)
+<img :src="$withBase('/compleat.png')">
 
 Nuxt では **components/に作成したファイルがそのままコンポーネントとして使える**ようになります。
 
@@ -146,6 +146,6 @@ Nuxt では **components/に作成したファイルがそのままコンポー�
 
 次のようなページが作成されます。
 
-![](/editor.png)
+<img :src="$withBase('/editor.png')">
 
 これで必要な画面は揃いました。残りはデータの取得/編集機能の作成になります。

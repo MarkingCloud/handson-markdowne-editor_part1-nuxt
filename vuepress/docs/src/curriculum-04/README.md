@@ -4,7 +4,7 @@
 
 Cloud Shell を開いてコードをクローンしましょう。
 
-![](/cloud-shell.png)
+<img :src="$withBase('/cloud-shell.png')">
 
 ::: tip Cloud Shell とは
 

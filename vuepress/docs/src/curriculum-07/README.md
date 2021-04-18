@@ -2,7 +2,7 @@
 
 Store を使ってデータの呼び出しと保存を行いましょう。
 
-![](/store.png)
+<img :src="$withBase('/store.png')">
 
 ## 1. Store とは？
 
@@ -13,7 +13,7 @@ Nuxt の状態管理ツール。ほぼ Vuex と思ってもらって良いと思
 MVC モデルの課題を解消する新しいデータ管理の考え方です。  
 （Flux については[こちらの記事](https://qiita.com/knhr__/items/5fec7571dab80e2dcd92)が分かりやすかったです。）
 
-![](/flux.png)
+<img :src="$withBase('/flux.png')">
 
 ## 2. state 作成
 
@@ -104,7 +104,7 @@ export default {
 
 初期値が入力されたことで、カードが出現します。
 
-![](/compleat.png)
+<img :src="$withBase('/compleat.png')">
 
 ポイントは`this.$store.state`で、Store へアクセスできるところです。
 
@@ -120,7 +120,7 @@ Flux ではデータの整合性を保つため、state を直接編集するこ
 
 のどちらかでデータを編集する必要があります。
 
-![](/vuex.png)
+<img :src="$withBase('/vuex.png')">
 
 次の操作を行ってください。
 

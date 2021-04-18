@@ -2,7 +2,7 @@
 
 Pages/を編集してメインになるページを表示しましょう。
 
-![](/page.png)
+<img :src="$withBase('/page.png')">
 
 ## 1. ローカルで立ち上げてみる
 
@@ -20,7 +20,7 @@ npm run dev
 
 - 出力された URL をクリックする。
 
-![](/dev.png)
+<img :src="$withBase('/dev.png')">
 
 :::warning 注意
 URL は copy&past せずクリックしてください
@@ -30,7 +30,7 @@ URL は copy&past せずクリックしてください
 
 まだ Pages/の中身が空なので、メインになるページが表示されません。
 
-![](/404.png)
+<img :src="$withBase('/404.png')">
 
 ## 2. Index ページ作成
 
@@ -40,7 +40,7 @@ index.html に当たるページを作成してみましょう。
 
 - web サーバーにしている shell はそのままで、新しいタブを開く。
 
-![](/tab.png)
+<img :src="$withBase('/tab.png')">
 
 - 次のコマンドを実行して作業ディレクトリを移動する。
 
@@ -64,7 +64,7 @@ mv pages/index.vue.markingcloud pages/index.vue
 
 URL のルート(‘/')に index.vue が割り当てられました。
 
-![](/index.png)
+<img :src="$withBase('/index.png')">
 
 ## 3. HOME ページ作成（静的ルーティング）
 
@@ -82,11 +82,11 @@ mv pages/home.vue.markingcloud pages/home.vue
 
 - 開いているページにて URL に「ルート URL/home」を打ち込み移動する。
 
-![](/url.png)
+<img :src="$withBase('/url.png')">
 
 次のようなページが生成されます。
 
-![](/home.png)
+<img :src="$withBase('/home.png')">
 
 Nuxt では pages/の中に作成した**ファイル名がそのまま URL のパス**となり、  
 その**パスへのルーティングは自動で生成されます**。  
@@ -122,7 +122,7 @@ mv pages/_id.vue.markingcloud pages/_id.vue
 
 次のようなページが生成されます。
 
-![](/id.png)
+<img :src="$withBase('/id.png')">
 
 Nuxt では**アンダーバー(‘\_')を付けたファイルが動的な URL に対応**します。  
 **動的なルーティングのパスも自動で生成**されています。  

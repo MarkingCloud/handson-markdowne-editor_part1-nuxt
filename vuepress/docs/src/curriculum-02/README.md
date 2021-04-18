@@ -6,7 +6,7 @@ vue.js/Nuxt.js のポジションやコードの読み方を解説します。
 
 ちょっとだけ語れるようになります。
 
-![](/vue-nuxt.png)
+<img :src="$withBase('/vue-nuxt.png')">
 
 ## Nuxt.js のディレクトリの役割が(ちょっと)分かる
 
@@ -14,7 +14,7 @@ vue.js/Nuxt.js のポジションやコードの読み方を解説します。
 
 各ディレクトリ構成の役割がなんとなく分かります。
 
-![](/image.png)
+<img :src="$withBase('/image.png')">
 
 ## Pages, Components, Store の使い方が(ちょっと)分かる
 
@@ -22,4 +22,4 @@ vue.js/Nuxt.js のポジションやコードの読み方を解説します。
 
 これらの使い方がふんわりと理解できます。
 
-![](/icon.png)
+<img :src="$withBase('/icon.png')">
