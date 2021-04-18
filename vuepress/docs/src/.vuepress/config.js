@@ -4,7 +4,7 @@ module.exports = {
   /**
    * Ref：https://v1.vuepress.vuejs.org/config/#title
    */
-  title: 'Vuepress Docs Boilerplate',
+  title: 'アプリ作成ハンズオン〜Nuxt編〜',
   /**
    * Ref：https://v1.vuepress.vuejs.org/config/#description
    */
@@ -32,24 +32,45 @@ module.exports = {
     docsDir: '',
     editLinkText: '',
     lastUpdated: false,
-    nav: [
-      {
-        text: 'Guide',
-        link: '/guide/',
-      },
-      {
-        text: 'Config',
-        link: '/config/'
-      },
-      {
-        text: 'VuePress',
-        link: 'https://v1.vuepress.vuejs.org'
-      }
-    ],
     sidebar: [
       {
-        title: "1.はじめに",
-        path: "/config/",
+        title: "1. はじめに",
+        path: "/curriculum-01/",
+        collapsable: false
+      },
+      {
+        title: "2. ハンズオンのポイント",
+        path: "/curriculum-02/",
+        collapsable: false
+      },
+      {
+        title: "3. Vue.js / Nuxt.js とは",
+        path: "/curriculum-03/",
+        collapsable: false
+      },
+      {
+        title: "4. 事前準備",
+        path: "/curriculum-04/",
+        collapsable: false
+      },
+      {
+        title: "5. Pagesを使ってみる",
+        path: "/curriculum-05/",
+        collapsable: false
+      },
+      {
+        title: "6. Componentsを使ってみる",
+        path: "/curriculum-06/",
+        collapsable: false
+      },
+      {
+        title: "7. Storeを使ってみる",
+        path: "/curriculum-07/",
+        collapsable: false
+      },
+      {
+        title: "8. おわりに",
+        path: "/curriculum-08/",
         collapsable: false
       },
     ]
