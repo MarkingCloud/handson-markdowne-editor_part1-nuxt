@@ -8,7 +8,7 @@ Nuxt を使って MarkdownEditor を作成することができました。
 
 次回は～ Firebase 編～となります。
 
-![](/firebase.png)
+![]($withBase/firebase.png)
 
 次のテーマのコンテンツを予定しています。
 
