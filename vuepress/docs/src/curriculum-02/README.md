@@ -18,7 +18,7 @@ vue.js/Nuxt.js のポジションやコードの読み方を解説します。
 
 ## Pages, Components, Store の使い方が(ちょっと)分かる
 
-今回のハンズオンの中では主に Pages. Components, Store の機能を利用します。
+今回のハンズオンの中では主に pages, components, store の機能を利用します。
 
 これらの使い方がふんわりと理解できます。
 
